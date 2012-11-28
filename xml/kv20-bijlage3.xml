@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmi8:VV_TM_PUSH xmlns:tmi8="http://bison.connekt.nl/tmi8/kv20/msg" xmlns:tmi8c="http://bison.connekt.nl/tmi8/kv20/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bison.connekt.nl/tmi8/kv20/msg kv20-msg.xsd">
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Uitgewerkt voorbeeld op basis van koppelvlak 20 bijlage 3 -->
+	<!-- "Voorbeeld scenario gebruik koppelvlak 20 in Utrecht"     -->
+	<!-- Bevat daarnaast nog diverse uitgewerkte voorbeeld voor    -->
+	<!-- o.a. ritgerelateerde vrije tekst.                         -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Start van het PUSH document -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<tmi8:SubscriberID>9292</tmi8:SubscriberID>
+	<tmi8:Version>BISON 8.1.0.0</tmi8:Version>
+	<tmi8:DossierName>KV20mutation</tmi8:DossierName>
+	<tmi8:Timestamp>2007-10-31T11:45:21+01:00</tmi8:Timestamp>
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Start uitgewerkte voorbeeld koppelvlak 20 bijlage 3       -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<tmi8:KV20mutation>
+		<tmi8:KV20JOURNEY>
+			<tmi8:dataownercode>CXX</tmi8:dataownercode>
+			<tmi8:lineplanningnumber>L120</tmi8:lineplanningnumber>
+			<tmi8:journeynumber>525</tmi8:journeynumber>
+			<tmi8:validfrom>2011-06-01</tmi8:validfrom>
+			<tmi8:validthru>2011-06-30</tmi8:validthru>
+		</tmi8:KV20JOURNEY>
+		<tmi8:KV20MUTATEJOURNEYSTOP>
+			<tmi8:timestamp>2008-05-05T23:09:00+01:00</tmi8:timestamp>
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>101</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>110</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>109</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>108</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>107</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<tmi8:CHANGEPASSTIMES>
+				<tmi8:userstopcode>102</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:targetarrivaltime>08:45:00</tmi8:targetarrivaltime>
+				<tmi8:targetdeparturetime>08:45:00</tmi8:targetdeparturetime>
+				<tmi8:journeystoptype>FIRST</tmi8:journeystoptype>
+			</tmi8:CHANGEPASSTIMES>
+			<tmi8:CHANGEDESTINATION>
+				<tmi8:userstopcode>102</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:destinationcode>UtrNd</tmi8:destinationcode>
+				<tmi8:destinationname50>Neude</tmi8:destinationname50>
+				<tmi8:destinationname16>Neude</tmi8:destinationname16>
+			</tmi8:CHANGEDESTINATION>
+			<tmi8:CHANGEPASSTIMES>
+				<tmi8:userstopcode>103</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:targetarrivaltime>08:50:00</tmi8:targetarrivaltime>
+				<tmi8:targetdeparturetime>08:50:00</tmi8:targetdeparturetime>
+				<tmi8:journeystoptype>INTERMEDIATE</tmi8:journeystoptype>
+			</tmi8:CHANGEPASSTIMES>
+			<tmi8:CHANGEDESTINATION>
+				<tmi8:userstopcode>103</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:destinationcode>UtrNd</tmi8:destinationcode>
+				<tmi8:destinationname50>Neude</tmi8:destinationname50>
+				<tmi8:destinationname16>Neude</tmi8:destinationname16>
+			</tmi8:CHANGEDESTINATION>
+			<tmi8:CHANGEPASSTIMES>
+				<tmi8:userstopcode>104</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:targetarrivaltime>08:55:00</tmi8:targetarrivaltime>
+				<tmi8:targetdeparturetime>08:55:00</tmi8:targetdeparturetime>
+				<tmi8:journeystoptype>INTERMEDIATE</tmi8:journeystoptype>
+			</tmi8:CHANGEPASSTIMES>
+			<tmi8:CHANGEDESTINATION>
+				<tmi8:userstopcode>104</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:destinationcode>UtrNd</tmi8:destinationcode>
+				<tmi8:destinationname50>Neude</tmi8:destinationname50>
+				<tmi8:destinationname16>Neude</tmi8:destinationname16>
+			</tmi8:CHANGEDESTINATION>
+			<tmi8:CHANGEPASSTIMES>
+				<tmi8:userstopcode>105</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:targetarrivaltime>09:00:00</tmi8:targetarrivaltime>
+				<tmi8:targetdeparturetime>09:05:00</tmi8:targetdeparturetime>
+				<tmi8:journeystoptype>INTERMEDIATE</tmi8:journeystoptype>
+			</tmi8:CHANGEPASSTIMES>
+			<tmi8:CHANGEDESTINATION>
+				<tmi8:userstopcode>105</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:destinationcode>UtrNd</tmi8:destinationcode>
+				<tmi8:destinationname50>Neude</tmi8:destinationname50>
+				<tmi8:destinationname16>Neude</tmi8:destinationname16>
+			</tmi8:CHANGEDESTINATION>
+			<tmi8:CHANGEPASSTIMES>
+				<tmi8:userstopcode>106</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:targetarrivaltime>09:10:00</tmi8:targetarrivaltime>
+				<tmi8:targetdeparturetime>09:10:00</tmi8:targetdeparturetime>
+				<tmi8:journeystoptype>LAST</tmi8:journeystoptype>
+			</tmi8:CHANGEPASSTIMES>
+			<tmi8:MUTATIONMESSAGE>
+				<tmi8:userstopcode>105</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:reasoncontent>Haltes vervallen vanwege werkzaamheden</tmi8:reasoncontent>
+			</tmi8:MUTATIONMESSAGE>
+		</tmi8:KV20MUTATEJOURNEYSTOP>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<!-- Einde uitgewerkte voorbeeld koppelvlak 20 bijlage 3       -->
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</tmi8:KV20mutation>
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Einde van het PUSH document -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</tmi8:VV_TM_PUSH>

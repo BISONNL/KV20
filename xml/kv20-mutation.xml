@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmi8:VV_TM_PUSH xmlns:tmi8="http://bison.connekt.nl/tmi8/kv20/msg" xmlns:tmi8c="http://bison.connekt.nl/tmi8/kv20/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bison.connekt.nl/tmi8/kv20/msg kv20-msg.xsd">
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Uitgewerkt voorbeeld op basis van koppelvlak 20 bijlage 3 -->
+	<!-- "Voorbeeld scenario gebruik koppelvlak 20 in Utrecht"     -->
+	<!-- Bevat daarnaast nog diverse uitgewerkte voorbeeld voor    -->
+	<!-- o.a. ritgerelateerde vrije tekst.                         -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Start van het PUSH document -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<tmi8:SubscriberID>GOVI</tmi8:SubscriberID>
+	<tmi8:Version>8.1.0.0</tmi8:Version>
+	<tmi8:DossierName>KV20mutation</tmi8:DossierName>
+	<tmi8:Timestamp>2007-10-31T11:45:21+01:00</tmi8:Timestamp>
+	<tmi8:KV20mutation>
+		<!-- dit bericht heeft betrekking op onderstaande (geplande) publieksrit -->
+		<tmi8:KV20JOURNEY>
+			<tmi8:dataownercode>ARR</tmi8:dataownercode>
+			<tmi8:lineplanningnumber>N198</tmi8:lineplanningnumber>
+			<tmi8:journeynumber>6547</tmi8:journeynumber>
+			<!-- aanpassing is gelding van 5 mei 2011 t/m 13 mei 2011 -->
+			<tmi8:validfrom>2011-05-05</tmi8:validfrom>
+			<tmi8:validthru>2011-05-13</tmi8:validthru>
+		</tmi8:KV20JOURNEY>
+		<tmi8:KV20MUTATEJOURNEY>
+			<!-- scenario 1: rit vervalt ... -->
+			<tmi8:timestamp>2011-05-01T11:44:09.000+01:00</tmi8:timestamp>
+			<tmi8:CANCEL>
+				<tmi8:reasontype>1</tmi8:reasontype>
+				<tmi8:subreasontype>19_1</tmi8:subreasontype>
+			</tmi8:CANCEL>
+		</tmi8:KV20MUTATEJOURNEY>
+	</tmi8:KV20mutation>
+	<tmi8:KV20mutation>
+		<tmi8:KV20JOURNEY>
+			<tmi8:dataownercode>ARR</tmi8:dataownercode>
+			<tmi8:lineplanningnumber>N198</tmi8:lineplanningnumber>
+			<tmi8:journeynumber>6547</tmi8:journeynumber>
+			<!-- aanpassing is gelding van 5 mei 2011 t/m 13 mei 2011 -->
+			<tmi8:validfrom>2011-05-05</tmi8:validfrom>
+			<tmi8:validthru>2011-05-13</tmi8:validthru>
+		</tmi8:KV20JOURNEY>
+		<tmi8:KV20MUTATEJOURNEY>
+			<!-- scenario 2: rit wordt hersteld -->
+			<tmi8:timestamp>2011-05-01T11:44:09.000+01:00</tmi8:timestamp>
+			<tmi8:RECOVER/>
+		</tmi8:KV20MUTATEJOURNEY>
+		<tmi8:KV20MUTATEJOURNEYSTOP>
+			<!-- scenario 3: eerste passage(s) vervallen -->
+			<tmi8:timestamp>2011-05-01T11:44:09.000+01:00</tmi8:timestamp>
+			<!-- Passage#1 57330000/1 vervalt voor deze rit -->
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>57330000</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<!-- Passage#2 57330001/1 vervalt voor deze rit -->
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>57330001</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<!-- Passage#3 wordt 1e passage en betreffende halte wordt dus beginhalte voor de rit -->
+			<tmi8:CHANGEPASSTIMES>
+				<!-- Verander aankomst en vertrektijden voor passage 5733002/1 op deze rit -->
+				<tmi8:userstopcode>57330002</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:targetarrivaltime>10:00:00</tmi8:targetarrivaltime>
+				<tmi8:targetdeparturetime>10:00:00</tmi8:targetdeparturetime>
+				<tmi8:journeystoptype>FIRST</tmi8:journeystoptype>
+			</tmi8:CHANGEPASSTIMES>
+			<!-- scenario 4: laatste passage(s) vervallen -->
+			<!-- Passage#n 57330092/1 vervalt voor deze rit -->
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>57330092</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<!-- Passage#n-1 57330091/1 vervalt voor deze rit -->
+			<tmi8:SHORTEN>
+				<tmi8:userstopcode>57330091</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+			</tmi8:SHORTEN>
+			<!-- Passage#n-2 wordt laatste passage en betreffende halte wordt dus eindhalte voor de rit-->
+			<tmi8:CHANGEPASSTIMES>
+				<!-- Verander aankomst en vertrektijden voor passage 5733090/1 op deze rit -->
+				<tmi8:userstopcode>57330090</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:targetarrivaltime>10:00:00</tmi8:targetarrivaltime>
+				<tmi8:targetdeparturetime>10:00:00</tmi8:targetdeparturetime>
+				<tmi8:journeystoptype>LAST</tmi8:journeystoptype>
+			</tmi8:CHANGEPASSTIMES>
+			<!-- .... en de bestemming .... -->
+			<tmi8:CHANGEDESTINATION>
+				<!-- Verander bestemming voor passage 5733080/1 -->
+				<tmi8:userstopcode>57330080</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:destinationcode>UtrCS02</tmi8:destinationcode>
+				<tmi8:destinationname50>Utrecht CS Westzijde</tmi8:destinationname50>
+				<tmi8:destinationname16>Utrecht CS</tmi8:destinationname16>
+			</tmi8:CHANGEDESTINATION>
+			<!-- scenario 5: rit gerelateerde vrije tekst -->
+			<tmi8:MUTATIONMESSAGE>
+				<tmi8:userstopcode>57330001</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:reasoncontent>Busstation niet bereikbaar vanwege .......</tmi8:reasoncontent>
+				<tmi8:advicecontent>Opstappen op halte 5733003.....</tmi8:advicecontent>
+			</tmi8:MUTATIONMESSAGE>
+		</tmi8:KV20MUTATEJOURNEYSTOP>
+	</tmi8:KV20mutation>
+	<!-- schrap een andere publieksrit -->
+	<tmi8:KV20mutation>
+		<tmi8:KV20JOURNEY>
+			<tmi8:dataownercode>CXX</tmi8:dataownercode>
+			<tmi8:lineplanningnumber>N199</tmi8:lineplanningnumber>
+			<tmi8:journeynumber>842</tmi8:journeynumber>
+			<tmi8:validfrom>2010-12-25</tmi8:validfrom>
+			<tmi8:validthru>2010-12-25</tmi8:validthru>
+			<!-- illustratie van de werking van de container constructie -->
+			<!-- voorbeeld is hier dat een extra veld is toegevoegd sinds de niet-bestaande 'versie 1.2' -->
+			<tmi8c:delimiter since="versie 1.2"/>
+			<ditveldhebikzojuistbedacht>hier staat onzin</ditveldhebikzojuistbedacht>
+		</tmi8:KV20JOURNEY>
+		<tmi8:KV20MUTATEJOURNEY>
+			<tmi8:timestamp>2011-05-01T11:44:09.000+01:00</tmi8:timestamp>
+			<tmi8:CANCEL>
+        </tmi8:CANCEL>
+		</tmi8:KV20MUTATEJOURNEY>
+		<tmi8:KV20MUTATEJOURNEYSTOP>
+			<tmi8:timestamp>2011-05-01T11:44:09.000+01:00</tmi8:timestamp>
+		</tmi8:KV20MUTATEJOURNEYSTOP>
+	</tmi8:KV20mutation>
+	<tmi8:KV20mutation>
+		<tmi8:KV20JOURNEY>
+			<tmi8:dataownercode>CXX</tmi8:dataownercode>
+			<tmi8:lineplanningnumber>N199</tmi8:lineplanningnumber>
+			<tmi8:journeynumber>842</tmi8:journeynumber>
+			<tmi8:validfrom>2010-10-23</tmi8:validfrom>
+			<tmi8:validthru>2010-10-23</tmi8:validthru>
+		</tmi8:KV20JOURNEY>
+		<tmi8:KV20MUTATEJOURNEY>
+			<tmi8:timestamp>2011-05-01T11:44:09.000+01:00</tmi8:timestamp>
+			<!-- Herstel eerdere wijzigingen op de geplande rit; rit is niet langer vervallen -->
+			<tmi8:RECOVER>
+      </tmi8:RECOVER>
+		</tmi8:KV20MUTATEJOURNEY>
+	</tmi8:KV20mutation>
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Start Rit gerelateerde vrije tekst bij een mutatie        -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<tmi8:KV20mutation>
+		<tmi8:KV20JOURNEY>
+			<tmi8:dataownercode>CXX</tmi8:dataownercode>
+			<tmi8:lineplanningnumber>1</tmi8:lineplanningnumber>
+			<tmi8:journeynumber>10</tmi8:journeynumber>
+			<tmi8:validfrom>2011-05-04</tmi8:validfrom>
+			<tmi8:validthru>2010-05-04</tmi8:validthru>
+		</tmi8:KV20JOURNEY>
+		<tmi8:KV20MUTATEJOURNEYSTOP>
+			<tmi8:timestamp>2011-05-01T07:54:00</tmi8:timestamp>
+			<tmi8:MUTATIONMESSAGE>
+				<tmi8:userstopcode>3000</tmi8:userstopcode>
+				<tmi8:passagesequencenumber>0</tmi8:passagesequencenumber>
+				<tmi8:reasoncontent>Tramhalte DAM niet bereikbaar vanwege 4 mei viering</tmi8:reasoncontent>
+				<tmi8:advicecontent>Opstappen op halte CS</tmi8:advicecontent>
+			</tmi8:MUTATIONMESSAGE>
+		</tmi8:KV20MUTATEJOURNEYSTOP>
+	</tmi8:KV20mutation>
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Einde Rit gerelateerde vrije tekst bij een mutatie        -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Start andere voorbeelden -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<tmi8:KV20mutation>
+		<tmi8:KV20JOURNEY>
+			<!-- Minimaal koppelvlak 20 dossier -->
+			<tmi8:dataownercode>a</tmi8:dataownercode>
+			<tmi8:lineplanningnumber>1</tmi8:lineplanningnumber>
+			<tmi8:journeynumber>0</tmi8:journeynumber>
+			<tmi8:validfrom>2010-12-12</tmi8:validfrom>
+			<tmi8:validthru>2010-12-12</tmi8:validthru>
+		</tmi8:KV20JOURNEY>
+		<tmi8:KV20MUTATEJOURNEYSTOP>
+			<tmi8:timestamp>2011-05-01T11:44:09.000+01:00</tmi8:timestamp>
+		</tmi8:KV20MUTATEJOURNEYSTOP>
+	</tmi8:KV20mutation>
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Voorbeeld van een extensie -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tmi8:KV20mutation>
+	<tmi8:KV20JOURNEY>
+		<tmi8:dataownercode>a</tmi8:dataownercode>
+		<tmi8:lineplanningnumber>9999ab9999</tmi8:lineplanningnumber>
+		<tmi8:journeynumber>9999</tmi8:journeynumber>
+		<tmi8:validfrom>2010-12-12</tmi8:validfrom>
+		<tmi8:validthru>2010-12-12</tmi8:validthru>
+	</tmi8:KV20JOURNEY>
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- voorbeeld van toekomstige uitbreidingen welke --> 
+	<!-- door deze versie syntactiesch toegestaan zijn -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<tmi8c:delimiter since="toekomstig"></tmi8c:delimiter>
+	<tmi8:uitbreiding>nieuwe informatie</tmi8:uitbreiding>
+	<tmi8c:delimiter since="nog verder in de toekomst"/>
+	<tmi8:uitbreiding99>nieuwe informatie </tmi8:uitbreiding99>
+</tmi8:KV20mutation>
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<!-- Einde van het PUSH document -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</tmi8:VV_TM_PUSH>
